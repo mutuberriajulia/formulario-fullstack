@@ -1,0 +1,110 @@
+:root { /*variables*/
+    --color-fondo-pagina: #f4f4f4;      
+    --color-fondo-tarjeta: #ffffff;     
+    --color-texto: #333333;             
+    --color-bordes: #cccccc;            
+    --color-boton: #007bff;              
+    --color-texto-boton: #ffffff;      
+    --color-alerta: #d9534f;  
+}
+
+body.alto-contraste { /*variables*/
+    --color-fondo-pagina: #000000;      
+    --color-fondo-tarjeta: #000000;      
+    --color-texto: #ffffff;              
+    --color-bordes: #ffffff;            
+    --color-boton: #ffff00;             
+    --color-texto-boton: #000000;        
+    --color-alerta:#d9534f;             
+}
+
+* { /*disenio a todos los elementos*/
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {  /*disenio general*/    
+    background-color: var(--color-fondo-pagina);
+    color: var(--text-primary); 
+    color: var(--color-texto);
+    font-family: sans-serif;           
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;               
+}
+
+.selector-estilos { /*tamanio del boton de estilos*/
+    margin-bottom: 25px;
+}
+
+.selector-estilos button { /*disenio del boton de estilos*/
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #e0e0e0;
+    color: #000000;
+    border: 2px solid #333333;
+    margin: 0 5px;
+}
+
+.contenedor-formulario { /*disenio del formulario*/
+    background-color: var(--color-fondo-tarjeta);
+    border: 3px solid var(--color-bordes);
+    padding: 30px;
+    width: 100%;
+    max-width: 450px;                    
+}
+
+h1 { /*tamanio del titulo del formulario*/
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.grupo-campo { /*tamanio de los campos*/
+    margin-bottom: 18px;
+}
+
+label { /*tamanio del nombre de los campos*/
+    display: block;                      
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"], /*estilo de los tipos de datos*/
+input[type="email"],
+input[type="date"],
+select {
+    width: 100%;                        
+    padding: 10px;
+    font-size: 16px;
+    background-color: var(--color-fondo-tarjeta);
+    color: var(--color-texto);
+    border: 2px solid var(--color-bordes);
+}
+
+input:focus, select:focus { /*estilo del contorno del campo*/
+    outline: 3px solid var(--color-boton); 
+}
+
+.btn-enviar { /*disenio del boton enviar*/
+    width: 100%;                      
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: var(--color-boton);
+    color: var(--color-texto-boton);
+    border: 2px solid var(--color-boton);
+    margin-top: 10px;
+}
+
+.error-mensaje { /*disenio del boton error*/
+    display: block;
+    color: var(--color-alerta);
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 5px;
+}

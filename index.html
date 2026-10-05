@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Estructura del html</title>
+        <link rel="stylesheet" href="styles.css"> 
+    </head>
+    <body>
+        <div class="selector-estilos">
+            <button type="click" id="btnNormal">Estilo normal</button>
+            <button type="click" id="btnAltoContraste">Estilo alto contraste</button>
+        </div>
+        <main class="contenedor-formulario">
+            <h1>Formulario</h1>
+            <form id="formulario">
+                <div class="grupo-campo">
+                    <label>Nombre:</label>
+                    <input type="text" id="nombre" name="nombre_usuario" required>
+                    <span class="error-mensaje" id="error-nombre" aria-live="polite"></span>
+                </div>
+                <div class="grupo-campo">
+                    <label>Apellido:</label>
+                    <input type="text" id="apellido" name="apellido_usuario" required>
+                    <span class="error-mensaje" id="error-apellido" aria-live="polite"></span>
+                </div>
+                <div class="grupo-campo">
+                    <label>Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error-mensaje" id="error-email" aria-live="polite"></span>
+                </div>
+                <div class="grupo-campo">
+                    <label>Fecha de Nacimiento:</label>
+                    <input type="date" id="fechaNacimiento" name="fecha_nacimiento_usuario" required>
+                    <span class="error-mensaje" id="error-fechaNacimiento" aria-live="polite"></span>
+                </div>
+                <div class="grupo-campo">
+                    <label for="pais">Pais de residencia:</label>
+                    <select id="pais" name="pais_origen" required>
+                        <option value="">Selecciona tu pais</option>
+                        <option value="ar">Argentina</option>
+                        <option value="bo">Bolivia</option>
+                        <option value="br">Brasil</option>
+                        <option value="ch">Chile</option>
+                        <option value="cl">Colombia</option>
+                        <option value="pe">Peru</option>
+                        <option value="vnz">Venezuela</option>
+                    </select>
+                    <span class="error-mensaje" id="error-pais" aria-live="polite"></span>
+                </div>
+                <button type="submit" id="btnEnviar" class="btn-enviar">Registrarse</button>
+            </form> 
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
