@@ -73,6 +73,9 @@ function validarEmail() {
         mostrarError(inputEmail, errorEmail, 'A lo sumo 320 caracteres.');
         return false;
     }
+    if (!valor.includes("@") || valor.startsWith("@") || valor.endsWith("@")) {
+        mostrarError(inputEmail, errorEmail, 'Email invalido');
+    }
     limpiarError(inputEmail, errorEmail);
     return true;
 }
