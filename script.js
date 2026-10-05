@@ -55,8 +55,8 @@ function validarApellido() {
         mostrarError(inputApellido, errorApellido, 'El apellido no puede estar vacio.');
         return false;
     }
-    if (valor.length > 50) {
-        mostrarError(inputApellido, errorApellido, 'A lo sumo 50 letras.');
+    if (valor.length < 2 || valor.length > 50) {
+        mostrarError(inputApellido, errorApellido, 'El apellido debe contener entre 2 y 50 letras.');
         return false;
     }
     limpiarError(inputApellido, errorApellido);
