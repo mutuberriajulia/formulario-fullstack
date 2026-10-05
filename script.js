@@ -41,8 +41,8 @@ function validarNombre() {
         mostrarError(inputNombre, errorNombre, 'El nombre no puede estar vacio.');
         return false;
     }
-    if (valor.length < 3) {
-        mostrarError(inputNombre, errorNombre, 'Al menos 3 letras.');
+    if (valor.length < 3 || valor.length > 50) {
+        mostrarError(inputNombre, errorNombre, 'El nombre debe contener entre 3 y 50 letras.');
         return false;
     }
     limpiarError(inputNombre, errorNombre);
@@ -106,7 +106,7 @@ inputEmail.addEventListener('input', validarEmail);
 inputFechaNacimiento.addEventListener('input', validarFechaNacimiento);
 inputPaisOrigen.addEventListener('input', validarPaisOrigen);
 
-formulario.addEventListener('submit', function(event) {
+formulario.addEventListener('submit', function (event) {
     event.preventDefault();
     limpiarTodosLosErrores();
     try {
@@ -127,7 +127,7 @@ formulario.addEventListener('submit', function(event) {
         btnEnviar.textContent = 'Enviando...';
         alert('Formulario enviado exitosamente.');
         formulario.reset();
-    } catch(error) {
+    } catch (error) {
         console.error('Se produjo un error al ingresar al formulario: ', error.message);
     } finally {
         const btnEnviar = document.getElementById('btnEnviar');
